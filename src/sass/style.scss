@@ -1,0 +1,309 @@
+@use './colors' as *;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Manrope', sans-serif;
+	font-size: 1.6rem;
+	background-color: $background-color;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1110px;
+}
+
+.nav {
+	padding: 2.5em 2em 4.3em;
+	text-align: center;
+}
+
+.header {
+	text-align: center;
+
+	.wrapper {
+		max-width: 500px;
+	}
+
+	&__bg {
+		min-height: 231px;
+		background-image: url('../img/illustration-hero-mobile.png');
+		background-size: cover;
+	}
+
+	&__info {
+		padding: 3em 1.5em 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2em;
+	}
+
+	&__title {
+		padding: 0 1.2em;
+		font-size: 3.2rem;
+		color: $white;
+
+		span {
+			color: $light-blue;
+		}
+	}
+
+	&__text {
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+		color: $gray-text-color;
+	}
+}
+
+.about {
+	padding: 9em 1.5em;
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		gap: 3em;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 1em;
+
+		&-img {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 1em;
+			padding: 2em;
+			width: 120px;
+			height: 120px;
+			border-radius: 2.5em;
+			background-color: $darker-blue;
+
+			img {
+				width: 60px;
+			}
+		}
+
+		&-info {
+			text-align: center;
+		}
+
+		&-title {
+			margin-bottom: 0.8em;
+			color: $white;
+			font-size: 1.8rem;
+		}
+
+		&-text {
+			color: $gray-text-color;
+			font-size: 1.5rem;
+			line-height: 2.5rem;
+		}
+	}
+}
+
+.attribution {
+	padding: 0.5em 0;
+	line-height: 1.9em;
+	font-size: 1.2rem;
+	text-align: center;
+	color: #fff;
+}
+
+.attribution a {
+	position: relative;
+	padding: 0.2em 0.2em;
+	color: #fff;
+	font-weight: bold;
+	border-bottom: 2px solid hsl(228, 45%, 44%);
+	text-decoration: none;
+	overflow: hidden;
+	z-index: 1;
+	transition: color 0.3s;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 0;
+		width: 100%;
+		background-color: hsl(228, 45%, 44%);
+		z-index: -1;
+		transition: height 0.3s;
+	}
+
+	&:hover::after {
+		height: 100%;
+		color: #fff;
+	}
+	&:hover {
+		color: #fff;
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		text-align: left;
+	}
+
+	.header {
+		position: relative;
+		&__bg {
+			position: relative;
+			min-height: 375px;
+			background-image: none;
+
+			&--left {
+				position: absolute;
+				top: 0;
+				left: 0;
+				min-height: 375px;
+				min-width: 50%;
+				background-image: url('../img/illustration-hero-left.svg');
+				background-size: contain;
+				background-position: -180px 0;
+			}
+
+			&--right {
+				position: absolute;
+				top: 0;
+				right: 0;
+				min-height: 375px;
+				min-width: 50%;
+				background-image: url('../img/illustration-hero-right.svg');
+				background-size: contain;
+				background-position: 250px 0;
+			}
+		}
+
+		&__info {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 2em;
+			padding: 5em 1.5em;
+			min-height: 268px;
+			background-color: $background-color;
+			background-image: url('../img/bg-hero-squiggle.svg');
+			background-position: center;
+			background-size: 80%;
+			background-repeat: no-repeat;
+		}
+	}
+
+	.about {
+		.wrapper {
+			max-width: 573px;
+		}
+		&__boxes {
+			gap: 2.5em;
+		}
+
+		&__box {
+			flex-direction: row;
+			justify-content: flex-start;
+			gap: 4em;
+
+			&:nth-child(odd) {
+				margin-left: 3.5em;
+			}
+
+			&-img {
+				margin: 0;
+			}
+
+			&-info {
+				max-width: 340px;
+				text-align: left;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1440px) {
+	.header {
+		position: relative;
+		&__bg {
+			position: relative;
+			min-height: 459px;
+			background-image: none;
+
+			&--left {
+				min-height: 459px;
+				background-position: -50px 0;
+			}
+
+			&--right {
+				min-height: 459px;
+				background-position: -45px 0;
+			}
+		}
+
+		&__info {
+			min-width: 730px;
+			background-size: 70% 100%;
+		}
+
+		&__title {
+			padding: 0 2em;
+			font-size: 4.8rem;
+		}
+
+		&__text {
+			padding: 0 6em;
+		}
+	}
+
+	.about {
+		padding: 13em 2em;
+		.wrapper {
+			max-width: 1100px;
+		}
+		&__boxes {
+			flex-direction: row;
+			gap: 2.5em;
+		}
+
+		&__box {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 2em;
+			max-width: 255px;
+
+			&:nth-child(odd) {
+				margin: 0;
+			}
+
+			&:nth-child(even) {
+				margin-top: 3em;
+			}
+
+			&-img {
+				width: 160px;
+				height: 160px;
+			}
+		}
+	}
+}
