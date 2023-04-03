@@ -116,6 +116,196 @@ body {
 	}
 }
 
+.offers {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 1.5em 9em;
+	text-align: center;
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin-bottom: 1em;
+		color: $white;
+		font-size: 2.4rem;
+	}
+
+	&__text {
+		color: $gray-text-color;
+		line-height: 2.5rem;
+		font-size: 1.5rem;
+	}
+
+	&__card {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 2.5em 2em;
+		text-align: left;
+		max-width: 445px;
+		min-height: 431px;
+		border-radius: 8px;
+
+		&-title {
+			margin-bottom: 1.9rem;
+			font-size: 1.8rem;
+		}
+
+		&-text {
+			color: $gray-text-color;
+			font-size: 1.5rem;
+			line-height: 2.5rem;
+		}
+
+		&-price {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			margin-top: 1.9rem;
+			font-size: 4rem;
+			font-weight: bold;
+
+			span {
+				font-size: 1.5rem;
+				font-weight: 400;
+				color: $gray-text-color;
+			}
+		}
+
+		&-list {
+			list-style: none;
+
+			li {
+				display: flex;
+				align-items: center;
+				gap: 1em;
+				font-size: 1.5rem;
+				margin: 1em 0;
+			}
+		}
+
+		&-img {
+			position: absolute;
+			left: 2em;
+		}
+
+		&--first {
+			margin: 5em 0 3.9em;
+			background-color: $darker-blue;
+			color: $white;
+
+			.offers__card-img {
+				top: -5%;
+			}
+		}
+
+		&--second {
+			background-color: $light-blue;
+			color: $black;
+
+			.offers__card-img {
+				top: -8%;
+			}
+		}
+	}
+}
+
+.newsletter {
+	background-image: url('../img/bg-footer-squiggle.svg');
+	background-size: 150%;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	padding: 0 1.5em 9em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.newsletter__box.error {
+		.newsletter__email {
+			border: 2px solid $error-color;
+		}
+
+		.newsletter__error {
+			visibility: visible;
+		}
+	}
+
+	&__title {
+		margin-bottom: 1.3em;
+		padding: 0 2em;
+		text-align: center;
+		font-size: 2.4rem;
+		color: $white;
+	}
+
+	&__box {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: 1fr, auto, 1fr;
+		gap: 0.5em;
+		width: 100%;
+	}
+
+	&__email {
+		grid-column: 1/7;
+		grid-row: 1/2;
+		padding: 1em 1.5em;
+		border: 2px solid transparent;
+		border-radius: 2em;
+		background-color: $darker-blue;
+		border: none;
+		color: $white;
+		font-size: 1.5rem;
+
+		&:focus {
+			outline: none;
+			border: 2px solid $light-blue;
+		}
+
+		&::placeholder {
+			font-family: 'Manrope', sans-serif;
+			color: $gray-text-color;
+			font-weight: bold;
+		}
+	}
+
+	&__error {
+		grid-column: 1/7;
+		visibility: hidden;
+		margin-left: 2em;
+		color: $error-color;
+		font-size: 1.2rem;
+	}
+
+	&__btn {
+		grid-column: 1/7;
+		grid-row: 3/4;
+		padding: 1em 1.5em;
+		border: 2px solid transparent;
+		border-radius: 2em;
+		background-color: $light-blue;
+		font-weight: bold;
+		color: $background-color;
+		font-size: 1.5rem;
+		cursor: pointer;
+		transition: color 0.3s, background-color 0.3s, border 0.3s;
+
+		&:hover,
+		&:focus {
+			outline: none;
+			background-color: $background-color;
+			border: 2px solid $light-blue;
+			color: $white;
+		}
+	}
+}
+
 .attribution {
 	padding: 0.5em 0;
 	line-height: 1.9em;
@@ -237,6 +427,38 @@ body {
 			}
 		}
 	}
+
+	.offers {
+		.wrapper {
+			max-width: 445px;
+		}
+
+		&__text {
+			max-width: 573px;
+		}
+
+		&__card {
+			&-title {
+				margin-top: 1em;
+			}
+		}
+	}
+
+	.newsletter {
+		&__box {
+			max-width: 476px;
+		}
+
+		&__email {
+			grid-column: 1/5;
+		}
+
+		&__btn {
+			grid-column: 5 / 7;
+			grid-row: 1 / 2;
+			margin-left: 0.5em;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -252,7 +474,7 @@ body {
 
 			&--left {
 				min-height: 459px;
-				background-position: -50px 0;
+				background-position: -40px 0;
 			}
 
 			&--right {
@@ -304,6 +526,47 @@ body {
 				width: 160px;
 				height: 160px;
 			}
+		}
+	}
+
+	.offers {
+		.wrapper {
+			flex-direction: row;
+			justify-content: space-between;
+			max-width: 920px;
+		}
+
+		&__text {
+			margin-bottom: 7em;
+			max-width: 540px;
+		}
+
+		&__card {
+			margin: 0;
+			max-width: 445px;
+
+			&-title {
+				margin-top: 1em;
+			}
+
+			&--first {
+				min-height: 425px;
+			}
+
+			&--second {
+				min-height: 449px;
+			}
+		}
+	}
+
+	.newsletter {
+		padding: 9.7em 0;
+		background-size: 130%;
+		background-position: 70% 50%;
+		background-repeat: no-repeat;
+
+		&__title {
+			font-size: 3.2rem;
 		}
 	}
 }
