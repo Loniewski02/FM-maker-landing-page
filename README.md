@@ -26,17 +26,17 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screens/desktop-view1.jpg)
-![](./screens/desktop-view2.jpg)
-![](./screens/desktop-view3.jpg)
-![](./screens/desktop-view4.jpg)
-![](./screens/mobile-view1.jpg)
-![](./screens/mobile-view2.jpg)
-![](./screens/mobile-view3.jpg)
-![](./screens/mobile-view4.jpg)
-![](./screens/mobile-view5.jpg)
-![](./screens/mobile-view6.jpg)
-![](./screens/mobile-view7.jpg)
+![](./screens/desktop-view1.png)
+![](./screens/desktop-view2.png)
+![](./screens/desktop-view3.png)
+![](./screens/desktop-view4.png)
+![](./screens/mobile-view1.png)
+![](./screens/mobile-view2.png)
+![](./screens/mobile-view3.png)
+![](./screens/mobile-view4.png)
+![](./screens/mobile-view5.png)
+![](./screens/mobile-view6.png)
+![](./screens/mobile-view7.png)
 
 
 ### Links
