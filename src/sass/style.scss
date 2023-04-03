@@ -431,17 +431,17 @@ body {
 
 			&--left {
 				min-height: 459px;
-				background-position: -40px 0;
+				background-position: -55px 0;
 			}
 
 			&--right {
 				min-height: 459px;
-				background-position: -45px 0;
+				background-position: -25px 0;
 			}
 		}
 
 		&__info {
-			min-width: 730px;
+			min-width: 770px;
 			background-size: 70% 100%;
 		}
 
@@ -538,14 +538,17 @@ body {
 	}
 
 	.header {
-		margin: 2em 0;
+		margin: 2em 0 0;
 	}
 
 	.about {
-		padding: 12em 2em;
+		padding: 10em 2em;
+	}
+	.offers {
+		padding: 0 2em 10em;
 	}
 
 	.newsletter {
-		padding: 2em 0 7em;
+		padding: 0 0 7em;
 	}
 }
