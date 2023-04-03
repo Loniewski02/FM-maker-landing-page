@@ -60,6 +60,7 @@ body {
 		padding: 0 1.2em;
 		font-size: 3.2rem;
 		color: $white;
+		line-height: 6rem;
 
 		span {
 			color: $light-blue;
@@ -345,14 +346,18 @@ body {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			gap: 2em;
+			gap: 1em;
 			padding: 5em 1.5em;
 			min-height: 268px;
 			background-color: $background-color;
 			background-image: url('../img/bg-hero-squiggle.svg');
-			background-position: center;
-			background-size: 80%;
+			background-size: 90%;
+			background-position: 50% 0;
 			background-repeat: no-repeat;
+		}
+
+		&__text {
+			margin-bottom: 2em;
 		}
 	}
 
@@ -442,7 +447,7 @@ body {
 
 		&__info {
 			min-width: 770px;
-			background-size: 70% 100%;
+			background-size: 70% 80%;
 		}
 
 		&__title {
@@ -525,6 +530,10 @@ body {
 		background-size: 130%;
 		background-position: 70% 50%;
 		background-repeat: no-repeat;
+
+		&__box {
+			max-width: 500px;
+		}
 
 		&__title {
 			font-size: 3.2rem;
