@@ -1,5 +1,6 @@
 const subscribeBtn = document.querySelector('.newsletter__btn');
 const emailInput = document.querySelector('.newsletter__email');
+const completeInfo = document.querySelector('.newsletter__complete');
 
 const showError = (input, msg) => {
 	const formBox = input.parentElement;
@@ -11,6 +12,8 @@ const showError = (input, msg) => {
 const clearError = input => {
 	const formBox = input.parentElement;
 	formBox.classList.remove('error');
+	input.value = '';
+	completeInfo.classList.add('animate');
 };
 
 const checkMail = input => {

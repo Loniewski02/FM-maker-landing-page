@@ -1,5 +1,20 @@
 @use './colors' as *;
 
+@keyframes complete {
+	from {
+		bottom: -20%;
+	}
+	to {
+		bottom: 15%;
+	}
+}
+
+@mixin pStyles {
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+	color: $gray-text-color;
+}
+
 *,
 *::before,
 *::after {
@@ -16,12 +31,6 @@ body {
 	font-family: 'Manrope', sans-serif;
 	font-size: 1.6rem;
 	background-color: $background-color;
-}
-
-@mixin pStyles {
-	font-size: 1.5rem;
-	line-height: 2.5rem;
-	color: $gray-text-color;
 }
 
 .wrapper {
@@ -215,14 +224,16 @@ body {
 }
 
 .newsletter {
+	position: relative;
+	padding: 0 1.5em 9em;
+	display: flex;
+	flex-direction: column;
 	background-image: url('../img/bg-footer-squiggle.svg');
 	background-size: 150%;
 	background-position: 50% 0;
 	background-repeat: no-repeat;
-	padding: 0 1.5em 9em;
-	display: flex;
-	flex-direction: column;
 	align-items: center;
+	overflow: hidden;
 
 	.newsletter__box.error {
 		.newsletter__email {
@@ -300,6 +311,18 @@ body {
 			border: 2px solid $light-blue;
 			color: $white;
 		}
+	}
+
+	&__complete {
+		position: absolute;
+		bottom: -20%;
+		font-size: 1.8rem;
+		color: $light-blue;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	.newsletter__complete.animate {
+		animation: complete 1s forwards;
 	}
 }
 
