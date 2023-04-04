@@ -29,6 +29,14 @@ const checkMail = input => {
 	}
 };
 
+const enterKeyCheck = e => {
+	if (e.key === 'Enter') {
+		checkMail(emailInput);
+	}
+};
+
 subscribeBtn.addEventListener('click', () => {
 	checkMail(emailInput);
 });
+
+emailInput.addEventListener('keyup', enterKeyCheck);
