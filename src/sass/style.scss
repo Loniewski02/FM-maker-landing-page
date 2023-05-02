@@ -28,9 +28,29 @@ html {
 }
 
 body {
+	min-height: 100vh;
 	font-family: 'Manrope', sans-serif;
 	font-size: 1.6rem;
 	background-color: $background-color;
+	scrollbar-width: thin;
+	scrollbar-color: #3ee9e5 #0c1233;
+
+	&::-webkit-scrollbar {
+		width: 15px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: #0c1233;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #3ee9e5;
+		border-radius: 1em;
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: #31b8b5;
+	}
 }
 
 .wrapper {
@@ -108,12 +128,13 @@ body {
 			background-color: $darker-blue;
 
 			img {
-				width: 60px;
+				width: auto;
 			}
 		}
 
 		&-info {
 			text-align: center;
+			max-width: 300px;
 		}
 
 		&-title {
@@ -490,7 +511,7 @@ body {
 		&__box {
 			flex-direction: column;
 			align-items: flex-start;
-			gap: 2em;
+			gap: 2.5em;
 			max-width: 255px;
 
 			&:nth-child(odd) {
@@ -499,6 +520,10 @@ body {
 
 			&:nth-child(even) {
 				margin-top: 3em;
+			}
+
+			&-title {
+				margin-bottom: 1em;
 			}
 
 			&-img {
