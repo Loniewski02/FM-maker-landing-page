@@ -41,7 +41,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code](https://github.com/Loniewski02/FM-maker-landing-page)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/html-sass-js-maker-landing-page--AwCPkKzd0)
 - Live Site URL: [Live](https://loniewski02.github.io/FM-maker-landing-page/)
 
 ## My process
